@@ -3,7 +3,7 @@ from numpy.random import default_rng as rng
 
 # Displays app title and description
 st.title(":material/show_chart: Show Sparklines")
-st.warning("To show trends over time, add sparklines with the `chart_data` parameter.")
+st.warning("To show trends over time, add sparklines with the `chart_data` parameter for `st.metric()`.")
 
 # Display toggable code block
 with st.expander(":material/code_blocks: See Code"):
