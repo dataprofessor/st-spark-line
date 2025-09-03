@@ -1,6 +1,8 @@
 import streamlit as st
 from numpy.random import default_rng as rng
 
+st.title(":material/show_chart: Show Sparklines")
+
 changes = list(rng(4).standard_normal(20))
 data = [sum(changes[:i]) for i in range(20)]
 delta = round(data[-1], 2)
