@@ -13,6 +13,4 @@ with row:
     st.metric(
         "Area", 10, delta, chart_data=data, chart_type="area", border=True
     )
-    st.metric(
-        "Bar", 10, delta, chart_data=data, chart_type="bar", border=True
-    )
+    st.metric("Bar", 10, delta, chart_data=data, chart_type="bar", border=True)
