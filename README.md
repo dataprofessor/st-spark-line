@@ -2,6 +2,8 @@
 
 Demo app of sparkline in action. To show trends over time, add sparklines with the chart_data parameter for st.metric().
 
+![](st-spark-line.png)
+
 ## Demo App
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://spark-line.streamlit.app/)
