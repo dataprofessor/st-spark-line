@@ -37,7 +37,7 @@ with row2:
         "Bar", 20, delta2, chart_data=data2, chart_type="bar", border=True
     )
 
-with st.expander("See Code"):
+with st.expander(":material/code: See Code"):
     st.code("""
     changes = list(rng(4).standard_normal(20))
     data = [sum(changes[:i]) for i in range(20)]
