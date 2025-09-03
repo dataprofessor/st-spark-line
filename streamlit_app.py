@@ -3,7 +3,7 @@ from numpy.random import default_rng as rng
 
 st.title(":material/show_chart: Show Sparklines")
 
-st.warning("To show trends over time, add sparklines with `chart_data`")
+st.warning("To show trends over time, add sparklines with the `chart_data` parameter.")
 
 changes = list(rng(4).standard_normal(20))
 data = [sum(changes[:i]) for i in range(20)]
