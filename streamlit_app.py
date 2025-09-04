@@ -17,7 +17,7 @@ with st.expander(":material/code_blocks: See Code"):
     data = [sum(changes[:i]) for i in range(20)]
     delta = round(data[-1], 2)
     
-    row = st.container(horizontal=True)
+    row = st.container(horizontal_alignment="distributed")
     with row:
         st.metric(
             "Line", 10, delta, chart_data=data, chart_type="line", border=True
