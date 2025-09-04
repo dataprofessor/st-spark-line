@@ -59,12 +59,12 @@ delta2 = round(data2[-1], 2)
 row1 = st.columns(3)
 row2 = st.columns(3)
 
-for col in row1 + row2:
-    tile = col.container(height=120)
-    tile.metric("Line", 10, delta, chart_data=data, chart_type="line", border=True)
-    tile.metric("Area", 10, delta, chart_data=data, chart_type="area", border=True)
-    tile.metric("Bar", 10, delta, chart_data=data, chart_type="bar", border=True)
-    tile.metric("Line", 20, delta2, chart_data=data2, chart_type="line", border=True)
-    tile.metric("Area", 20, delta2, chart_data=data2, chart_type="area", border=True)
-    tile.metric("Bar", 20, delta2, chart_data=data2, chart_type="bar", border=True)
+with rol1:
+    st.metric("Line", 10, delta, chart_data=data, chart_type="line", border=True)
+    st.metric("Area", 10, delta, chart_data=data, chart_type="area", border=True)
+    st.metric("Bar", 10, delta, chart_data=data, chart_type="bar", border=True)
+with row2:
+    st.metric("Line", 20, delta2, chart_data=data2, chart_type="line", border=True)
+    st.metric("Area", 20, delta2, chart_data=data2, chart_type="area", border=True)
+    st.metric("Bar", 20, delta2, chart_data=data2, chart_type="bar", border=True)
 
