@@ -59,7 +59,7 @@ delta2 = round(data2[-1], 2)
 row1 = st.columns(3)
 row2 = st.columns(3)
 
-with rol1:
+with row1:
     st.metric("Line", 10, delta, chart_data=data, chart_type="line", border=True)
     st.metric("Area", 10, delta, chart_data=data, chart_type="area", border=True)
     st.metric("Bar", 10, delta, chart_data=data, chart_type="bar", border=True)
