@@ -1,6 +1,6 @@
 # 📈 Sparkline demo
 
-Demo app of sparkline in action. To show trends over time, add sparklines with the `chart_data` parameter for `st.metric()`.
+Demo app of sparkline in action. To show trends over time, in `st.metric()` add sparklines with `chart_data` and choose a style with `chart_type`.
 
 <img src="st-spark-line.png" height="350"/>
 
