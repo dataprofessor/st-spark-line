@@ -1,12 +1,11 @@
 import streamlit as st
 from numpy.random import default_rng as rng
 
+# Displays app title and description
 st.set_page_config(
     page_title="Show Sparklines",
     page_icon=":material/show_chart:",
     layout="wide")
-
-# Displays app title and description
 st.title(":material/show_chart: Show Sparklines")
 st.warning("To show trends over time, add sparklines with the `chart_data` parameter for `st.metric()`.")
 
