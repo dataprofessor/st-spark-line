@@ -51,31 +51,20 @@ changes = list(rng(4).standard_normal(20))
 data = [sum(changes[:i]) for i in range(20)]
 delta = round(data[-1], 2)
 
-row = st.container(horizontal=True, horizontal_alignment="distribute")
-with row:
-    st.metric(
-        "Line", 10, delta, chart_data=data, chart_type="line", border=True
-    )
-    st.metric(
-        "Area", 10, delta, chart_data=data, chart_type="area", border=True
-    )
-    st.metric(
-        "Bar", 10, delta, chart_data=data, chart_type="bar", border=True
-    )
-
 # Display metrics with sparklines (negative trend)
 changes2 = list(-rng(4).standard_normal(20))
 data2 = [sum(changes2[:i]) for i in range(20)]
 delta2 = round(data2[-1], 2)
 
-row2 = st.container(horizontal=True)
-with row2:
-    st.metric(
-        "Line", 20, delta2, chart_data=data2, chart_type="line", border=True
-    )
-    st.metric(
-        "Area", 20, delta2, chart_data=data2, chart_type="area", border=True
-    )
-    st.metric(
-        "Bar", 20, delta2, chart_data=data2, chart_type="bar", border=True
-    )
+row1 = st.columns(3)
+row2 = st.columns(3)
+
+for col in row1 + row2:
+    tile = col.container(height=120)
+    col.metric("Line", 10, delta, chart_data=data, chart_type="line", border=True)
+    col.metric("Area", 10, delta, chart_data=data, chart_type="area", border=True)
+    col.metric("Bar", 10, delta, chart_data=data, chart_type="bar", border=True)
+    col.metric("Line", 20, delta2, chart_data=data2, chart_type="line", border=True)
+    col.metric("Area", 20, delta2, chart_data=data2, chart_type="area", border=True)
+    col.metric("Bar", 20, delta2, chart_data=data2, chart_type="bar", border=True)
+
