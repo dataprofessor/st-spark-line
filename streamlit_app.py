@@ -7,7 +7,7 @@ st.set_page_config(
     page_icon=":material/show_chart:",
     layout="wide")
 st.title(":material/show_chart: Show Sparklines")
-st.warning("To show trends over time, add sparklines with the `chart_data` parameter for `st.metric()`.")
+st.warning("To show trends over time, in `st.metric()` add sparklines with `chart_data` and choose a style with `chart_type`.")
 
 # Display toggable code block
 with st.expander(":material/code_blocks: See Code"):
