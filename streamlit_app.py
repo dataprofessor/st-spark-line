@@ -51,7 +51,7 @@ changes = list(rng(4).standard_normal(20))
 data = [sum(changes[:i]) for i in range(20)]
 delta = round(data[-1], 2)
 
-row = st.container(horizontal_alignment="distribute")
+row = st.container(vertical_alignment="distribute")
 with row:
     st.metric(
         "Line", 10, delta, chart_data=data, chart_type="line", border=True
