@@ -56,13 +56,17 @@ changes2 = list(-rng(4).standard_normal(20))
 data2 = [sum(changes2[:i]) for i in range(20)]
 delta2 = round(data2[-1], 2)
 
+# Define the chart types in a simple list
+chart_types = ["line", "area", "bar"]
+
+# Display metrics with sparklines
 # Row 1
 row1 = st.columns(3)
 
-for col, (label, chart_type) in zip(row1, [("Line", "line"), ("Area", "area"), ("Bar", "bar")]):
+for col, chart_type in zip(row1, chart_types):
     with col:
         st.metric(
-            label=label,
+            label=chart_type.capitalize(), # Create the label from the string
             value=10,
             delta=delta,
             chart_data=data,
@@ -73,10 +77,10 @@ for col, (label, chart_type) in zip(row1, [("Line", "line"), ("Area", "area"), (
 # Row 2
 row2 = st.columns(3)
 
-for col, (label, chart_type) in zip(row2, [("Line", "line"), ("Area", "area"), ("Bar", "bar")]):
+for col, chart_type in zip(row2, chart_types):
     with col:
         st.metric(
-            label=label,
+            label=chart_type.capitalize(), # Create the label from the string
             value=20,
             delta=delta2,
             chart_data=data2,
