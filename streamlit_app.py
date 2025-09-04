@@ -61,10 +61,10 @@ row2 = st.columns(3)
 
 for col in row1 + row2:
     tile = col.container(height=120)
-    col.metric("Line", 10, delta, chart_data=data, chart_type="line", border=True)
-    col.metric("Area", 10, delta, chart_data=data, chart_type="area", border=True)
-    col.metric("Bar", 10, delta, chart_data=data, chart_type="bar", border=True)
-    col.metric("Line", 20, delta2, chart_data=data2, chart_type="line", border=True)
-    col.metric("Area", 20, delta2, chart_data=data2, chart_type="area", border=True)
-    col.metric("Bar", 20, delta2, chart_data=data2, chart_type="bar", border=True)
+    tile.metric("Line", 10, delta, chart_data=data, chart_type="line", border=True)
+    tile.metric("Area", 10, delta, chart_data=data, chart_type="area", border=True)
+    tile.metric("Bar", 10, delta, chart_data=data, chart_type="bar", border=True)
+    tile.metric("Line", 20, delta2, chart_data=data2, chart_type="line", border=True)
+    tile.metric("Area", 20, delta2, chart_data=data2, chart_type="area", border=True)
+    tile.metric("Bar", 20, delta2, chart_data=data2, chart_type="bar", border=True)
 
