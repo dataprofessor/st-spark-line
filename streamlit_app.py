@@ -42,7 +42,7 @@ with st.expander(":material/code_blocks: See Code"):
         for col, chart_type in zip(row1, chart_types):
             with col:
                 st.metric(
-                    label=chart_type.capitalize(), # Create the label from the string
+                    label=chart_type.capitalize(), # Create label from the string
                     value=10,
                     delta=delta,
                     chart_data=data,
@@ -55,7 +55,7 @@ with st.expander(":material/code_blocks: See Code"):
         for col, chart_type in zip(row2, chart_types):
             with col:
                 st.metric(
-                    label=chart_type.capitalize(), # Create the label from the string
+                    label=chart_type.capitalize(), # Create label from the string
                     value=20,
                     delta=delta2,
                     chart_data=data2,
@@ -83,7 +83,7 @@ row1 = st.columns(3)
 for col, chart_type in zip(row1, chart_types):
     with col:
         st.metric(
-            label=chart_type.capitalize(), # Create the label from the string
+            label=chart_type.capitalize(), # Create label from the string
             value=10,
             delta=delta,
             chart_data=data,
@@ -96,7 +96,7 @@ row2 = st.columns(3)
 for col, chart_type in zip(row2, chart_types):
     with col:
         st.metric(
-            label=chart_type.capitalize(), # Create the label from the string
+            label=chart_type.capitalize(), # Create label from the string
             value=20,
             delta=delta2,
             chart_data=data2,
