@@ -12,6 +12,17 @@ st.warning("To show trends over time, in `st.metric()` add sparklines with `char
 # Display toggable code block
 with st.expander(":material/code_blocks: See Code"):
     st.code("""
+        import streamlit as st
+        from numpy.random import default_rng as rng
+        
+        # Displays app title and description
+        st.set_page_config(
+            page_title="Show Sparklines",
+            page_icon=":material/show_chart:",
+            layout="wide")
+        st.title(":material/show_chart: Show Sparklines")
+        st.warning("To show trends over time, in `st.metric()` add sparklines with `chart_data` and choose a style with `chart_type`.")
+
         # Display metrics with sparklines (positive trend)
         changes = list(rng(4).standard_normal(20))
         data = [sum(changes[:i]) for i in range(20)]
